@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var book = require("book.json");
+
+        function printValues(obj) {
+            for(var k in obj) {
+                if(obj[k] instanceof Object) {
+                    printValues(obj[k]);
+                } else {
+                    document.write(obj[k] + '<br />');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        // store JSON data in a JS variable
+        var json = '{"name": "peter", "age": 23, "country": "usa"}';
+
+        // converting JSON-encoded string to JS object
+        var obj = JSON.parse(json);
+        console.log(`obj: ${obj}`);
+        console.log(`obj.name: ${obj.name}`);
+        console.log(`obj.age: ${obj.age}`);
+        console.log(`obj.country: ${obj.country}`);
+
+
+        var json = `
+                [
+                    {
+                        "isbn": 1, 
+                        "name": "harry potter", 
+                        "year": 2015, 
+                        "author": "tom"
+                    }, 
+                    {
+                        "isbn": 2, 
+                        "name": "percy jackson", 
+                        "year": 2011, 
+                        "author": "john"
+                    }
+                ]
+        `;
+        var obj = JSON.parse(json);
+        printValues(obj);
+        document.write(`name: ${obj[0]["name"]} <br />`);
+        document.write(`name: ${obj[1]["name"]} <br />`);
+
+        var obj = {"name": "aman", "age": 24, "country": "canada"};
+        var json = JSON.stringify(obj);
+        console.log(json);
+    </script>        
+</body>
+</html>

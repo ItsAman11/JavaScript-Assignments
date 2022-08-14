@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="element" class="disabled"> Add, Remove or Determine Classes </p>
+
+    <script>
+        // Adding Classes to Elements
+        var c = document.getElementById("element");
+                    c.className = "anchor";
+                    c.className += "column";
+
+
+        // Another way to add classes to elements
+        c.classList.add("anchor");
+
+        // Removing Classes from Elements
+        c.classList.remove("column");
+
+        // Determine if the class exists or not
+        // class called "anchor"
+        if(c.classList.contains("anchor")) 
+        {
+            document.write("The class called anchor exists in the element. <br />");
+        }
+
+        else 
+        {
+            document.write("The class called anchor does not exist in the element. <br />");
+        }
+
+        // class called "column"
+        if(c.classList.contains("column")) 
+        {
+            document.write("The class called column exists in the element. <br />");
+        }
+
+        else 
+        {
+            document.write("The class called column does not exist in the element. <br />");
+        }
+
+        // class called "row"
+        if(c.classList.contains("row")) 
+        {
+            document.write("The class called row exists in the element. <br />");
+        }
+
+        else 
+        {
+            document.write("The class called row does not exist in the element. <br />");
+        }
+    </script>
+</body>
+</html>

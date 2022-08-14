@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Selecting Elements by Class Name -->
+    <p class="test"> Selecting an Element by Class Name 1 </p>
+    <p class="test"> Selecting an Element by Class Name 2 </p>
+
+    <hr />
+
+    <script>
+        // Selecting Elements by Class Name
+        var matches = document.getElementsByClassName("test");
+                    let NoOfMatches = matches.length;
+                    document.write(`Number of Matches: ${NoOfMatches} <br />`);
+                    
+                    matches[0].style.fontWeight = "bold";
+                    matches[1].style.textDecoration = "underline";
+                    
+                    matches[matches.length - 1].style.fontStyle = "italic";
+
+                    for(let elem in matches) {
+                        matches[elem].style.background = "#dedede";
+                    }
+    </script>
+</body>
+</html>

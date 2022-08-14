@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function firstFunction() {
+            // console.log('the first function executed successfully!');
+            document.write('the first function executed successfully!');
+        }
+
+        function sayHello() {
+            document.write('hi, how are you doing?');
+        }
+
+        function setHoverColor() {
+            btn.style.backgroundColor = 'yellow';
+        }
+
+        function setNormalColor() {
+            btn.style.backgroundColor = 'blue';
+        }
+
+        function displayWindowSize() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+
+            var size = `width: ${w}, height: ${h}`;
+            document.getElementById("result").innerHTML = size;
+        }
+    </script>
+</head>
+<body>
+
+    <button type="button" class="btn btn-info" id="myBtn"> click me </button>
+
+    <script>
+        var btn = document.getElementById("myBtn");
+
+        // btn.onclick = firstFunction;
+        // or
+        // btn.addEventListener('click', firstFunction);
+
+        btn.addEventListener('click', sayHello);
+        btn.addEventListener('mouseover', setHoverColor);
+        btn.addEventListener('mouseout', setNormalColor);
+
+        // adding event listeners to window object
+        window.addEventListener("resize", displayWindowSize);
+
+        // removing event listeners
+        btn.removeEventListener('click', sayHello);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Selecting Elements by CSS Selectors -->
+    <ul>
+        <li> Bread </li>
+        <li class="strike"> Coffee </li>
+        <li> Tea </li>
+    </ul>
+
+    <script>
+        // Selecting Elements by CSS Selectors
+        var matches3 = document.querySelectorAll("ul li");
+                       document.write("Total Number of Elements: " + matches3.length + "<br />");
+        
+        matches3 = document.querySelectorAll("ul li.strike");
+                   document.write("Total Number of Elements with a strike: " + matches3.length + "<br />");
+        matches3[0].style.textDecoration = "line-through";
+    </script>
+</body>
+</html>

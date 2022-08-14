@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="element"> CSS Properties in JavaScript </p>
+
+    <script> 
+        // Selecting an Element by ID
+        var s = document.getElementById("element");
+
+        // Naming Conventions of CSS Properties in JavaScript
+        s.style.color = "blue";
+        s.style.fontSize = "20px";
+        s.style.fontWeight = "bold"
+        s.style.fontFamily = "calibri";
+
+        var styles = window.getComputedStyle(s);
+    </script>
+</body>
+</html>
